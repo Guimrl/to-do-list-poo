@@ -1,0 +1,61 @@
+/* apply the css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #FFF;
+    font-family: Helvetica;
+}
+body {
+    background-color: #2C2C2C;
+}
+h2 {
+    margin-bottom: 25px;
+}
+/* to do container */
+#main-container {
+    background-color: #242424;
+    position: relative;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    margin-top: 5vh;
+}
+/* add container */
+#add-container {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+#add-container input, #add-container button {
+    padding: 10px;
+    background-color: #393939;
+    border: none;
+    width: 80%;
+    display: inline-block;
+}
+#add-container button {
+    width: 18%;
+    cursor: pointer;
+    transition: .5s;
+}
+#add-container button i {
+    color: #FF7066;
+}
+#add-container button:hover {
+    background-color: #FF7066;
+}
+#add-container button:hover > i {
+    color: #242424;
+}
+/* tasks container */
+.task {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #444;
+    position: relative; 
+}
+#empty-tasks {
+    text-align: center;
+}
