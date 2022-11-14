@@ -32,13 +32,13 @@ class Todo {
 
         this.checkTasks('remove');
     }
-    completeTask() {
+    completeTask(task) {
         //add done class
         task.classList.add('done');
     }
     addEvents() {
         let removeBtns = document.querySelectorAll('.fa-trash');
-        let removeBtn = removeBtns[removeBtns.length -1];
+        let removeBtn = removeBtns[removeBtns.length - 1];
         let doneBtns = document.querySelectorAll('.fa-check');
         let doneBtn = doneBtns[doneBtns.length - 1];
 
@@ -56,18 +56,12 @@ class Todo {
         let msg = document.querySelector('#empty-tasks');
 
         //create or remove task logic
-        if(command === 'add') {
-            this.totalTasks += 1;
-        } else if(command === 'remove') {
-            this.totalTasks -= 1;
-        }
+        var commandAdd = command === 'add';
+        var commandRemove = command === 'remove';
+        commandAdd, commandRemove ? this.totalTasks += 1 : this.totalTasks -= 1
 
-        //checa se tem mais de uma task e adiciona ou remove a class
-        if(this.totalTasks == 1) {
-            msg.classList.remove('hide');
-        } else {
-            msg.classList.add('hide');
-        }
+        //checks if it has more than one task and adds or removes the class
+        this.totalTasks == 1 ? msg.classList.remove('hide') : msg.classList.add('hide');
     }
 }
 let todo = new Todo();
